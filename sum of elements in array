@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b[] = new int[a];
+        int os = 0, oi = 0, es = 0, ei = 0;
+        
+        for(int i = 0; i<a; i++){
+            b[i] = sc.nextInt();
+        }
+        
+        for(int i = 0; i<a; i++){
+            if(b[i]%2 == 0){
+                es += b[i];
+               
+            }
+            else{
+                os += b[i];
+               
+            }
+            if(i%2 == 0)
+                ei += b[i];
+            else
+                oi += b[i];
+        }
+        System.out.print(es + " " + os + " " + ei + " " + oi);
+    }
+}
